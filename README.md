@@ -1,4 +1,4 @@
-# LinkLookout: Link Lookout V1.0
+# LinkLookout: V1.0 (Operation: Scanning Horizon)
 
 An interactive, terminal-based built with Python and the VirusTotal API to scan, analyze, and track URL security health metrics in real time.
 
