@@ -18,6 +18,7 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
 # Create your configuration environment file
+# (On Windows, manually create a file named .env and add your API key in the same folder as Link_Lookout.py)
 echo "API_Key=your_virustotal_api_key_here" > .env
 
 # Run the scanner engine
