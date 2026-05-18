@@ -1,0 +1,19 @@
+# Credentials and Environment Configurations
+.env
+.env.local
+
+# Python Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python caching and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Operating System Files
+.DS_Store
+Thumbs.db
