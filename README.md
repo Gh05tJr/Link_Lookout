@@ -38,6 +38,8 @@ nano Link_Lookout_Run.sh
 
 #Make the script executable and run the scanner:
 chmod +x Link_Lookout_Run.sh
+
+# use the below command to run the program without the need to active the virtual environment each time
 ./Link_Lookout_Run.sh
 ```
 ### Windows
