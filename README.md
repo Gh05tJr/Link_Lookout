@@ -2,27 +2,66 @@
 
 An interactive, terminal-based built with Python and the VirusTotal API to scan, analyze, and track URL security health metrics in real time.
 
-> **Project Nexus Suite:** LinkLookout is an official sub-project developed and maintained under the **Project Nexus**
+> **Project Nexus Suite:** Link Lookout is an official sub-project developed and maintained under the **Project Nexus**
 
 ## Run Locally
+
+### Linux
 
 ```bash
 # Clone the repository and navigate into it
 cd link-lookout
 
-# (Optional) Create a virtual environment
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+# Create a virtual environment
+python3 -m venv .Link_Lookout
+
+# Activate the virtual environment
+source .Link_Lookout/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
 
+# Deactivate/exit from the virtual environment
+deactivate
+
 # Create your configuration environment file
-# (On Windows, manually create a file named .env and add your API key in the same folder as Link_Lookout.py)
 echo "API_Key=your_virustotal_api_key_here" > .env
 
-# Run the scanner engine
-python Link_Lookout.py
+# Create a convenient execution script
+nano Link_Lookout_Run.sh
+
+#Paste the following code inside Link_Lookout_Run.sh:
+#!/bin/bash
+./.Link_Lookout/bin/python3 Link_Lookout.py "$@"
+
+#(Save and exit the editor)
+
+#Make the script executable and run the scanner:
+chmod +x Link_Lookout_Run.sh
+./Link_Lookout_Run.sh
+```
+### Windows
+```bash
+# Clone the repository and navigate into it
+cd link-lookout
+
+# Create a virtual environment
+python -m venv .Link_Lookout
+
+# Activate the virtual environment
+.Link_Lookout\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Deactivate/exit from the virtual environment
+deactivate
+
+# Create a file named .env in the same folder and add your API key:
+# API_Key=your_virustotal_api_key_here
+
+# Run the scanner engine directly using the virtual environment interpreter
+.Link_Lookout\Scripts\python.exe Link_Lookout.py
 ```
 # Files
 - Link_Lookout.py – Core application engine containing the custom terminal user interface (TUI), API orchestration, data parsing logic, and exception handlers.
